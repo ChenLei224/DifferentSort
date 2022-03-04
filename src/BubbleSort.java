@@ -6,12 +6,14 @@ public class BubbleSort{
     }
 
     static void sort(int[] a){
-
+        for(int i = a.length - 1; i > 0; i--){
+            findMax(a, i);
+        }
     }
 
-    static void findMax(int[] a){
-        for(int j = 0; j < a.length; j--){
-
+    static void findMax(int[] a, int n){
+        for(int j = 0; j < n; j++){
+            if(a[j] > a[j + 1]) swap(a, j, j+1);
         }
     }
 
